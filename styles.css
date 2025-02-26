@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      body {
+        font-family: "Poppins", serif;
+        background-color: transparent;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .flex{
+        display: flex;
+        gap:10px;
+      }
+      .navbar {
+        background: rgba(0, 0, 0, 0);
+      }
+      .navbar-brand img {
+        height: 40px;
+      }
+      .nav-link {
+        color: white !important;
+        font-size: 18px;
+      }
+      .nav-link:hover {
+        color: #f8f9fa !important;
+      }
+      .menu-icon {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+      .navbar-expand-lg .navbar-nav {
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      .hero {
+        position: relative;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        z-index: 2;
+      }
+
+      .hero .container {
+        margin: auto;
+      }
+      .main .black-gradient::after {
+        background: linear-gradient(
+          275deg,
+          #181818 10%,
+          hsla(0, 0%, 9%, 0.98) 20%,
+          hsla(0, 0%, 9%, 0.97) 25%,
+          hsla(0, 0%, 9%, 0.95) 35%,
+          hsla(0, 0%, 9%, 0.94) 40%,
+          hsla(0, 0%, 9%, 0.92) 45%,
+          hsla(0, 0%, 9%, 0.9) 50%,
+          hsla(0, 0%, 9%, 0.87) 55%,
+          hsla(0, 0%, 9%, 0.82) 60%,
+          hsla(0, 0%, 9%, 0.75) 65%,
+          hsla(0, 0%, 9%, 0.63) 70%,
+          hsla(0, 0%, 9%, 0.45) 75%,
+          hsla(0, 0%, 9%, 0.27) 80%,
+          hsla(0, 0%, 9%, 0.15) 85%,
+          hsla(0, 0%, 9%, 0.08) 90%,
+          hsla(0, 0%, 9%, 0.03) 95%,
+          hsla(0, 0%, 9%, 0)
+        );
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        z-index: -1;
+        width: 50%;
+        margin-left: auto;
+      }
+      .series-title{
+        font-size: 50px;
+        color: #fab432;
+        margin: 20px 0;
+      }
+      .series-para{
+        margin-bottom: 30px;
+      }
+      .btn-red {
+        background-color: #e50914;
+        background-image: linear-gradient(180deg, #e50914, #db0510);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 2px;
+        transition: all 0.5s ease-in-out;
+      }
+      .btn-outline {
+        border: 1px solid #888;
+        border-radius: 2px;
+        color: white;
+        padding: 10px 30px;
+        background-color: transparent;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+        transition: all 0.5s ease-in-out;
+      }
+      .btn-red:hover {
+        background: #f40612;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+      }
+      .btn-outline:hover {
+        background-color: hsla(0, 0%, 59%, 0.3);
+      }
+      .carousel-container {
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 8px;
+        height: 160px;
+        margin-top: 50px;
+      }
+      .item-carsouel{
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        width: 285px;
+        flex-shrink: 0;
+      }
+      .item-carsouel p{
+        position: relative;
+        bottom: 28px;
+        padding: 0 10px;
+        justify-content: space-between;
+        z-index: 2;
+      }
+      .item-carsouel::after{
+        content:"";
+        position:absolute;
+        width: 100%;
+        height: 5vh;
+        background: linear-gradient(179deg, rgb(23 23 23 / 0%) 0%, rgb(24 24 24 / 88%) 100%);
+        bottom: 0;
+      }
+      .item-carsouel .overlay{
+        position: absolute;
+        background-color: #ff2e398f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all .3s ease-in-out;
+        border-radius: 2px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0; 
+
+      }
+      .item-carsouel .overlay i{
+        visibility: hidden;
+        font-size: 46px;
+      }
+      .item-carsouel:hover .overlay i{
+        visibility: visible;
+      }
+      .item-carsouel:hover .overlay{
+       height: 100%;
+      }
+      .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+      }
+
+      .btn {
+        position: absolute;
+        top: 0px; 
+        background: rgba(227, 227, 227, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+      .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 60px;
+      }
+      .nav-link {
+        color: #ffffffbf !important;
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-link:hover {
+        color: #ffffff !important;
+      }
+      .btn:hover {
+        background: rgba(217, 217, 217, 0.8);
+      }
+
+      .prev {
+        left: 6px;
+      }
+
+      .next {
+        right: 6px;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .modal-content {
+        background: #131313;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%; /* Make it responsive */
+        position: relative;
+      }
+      
+      .modal-content img {
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      
+      .close {
+        position: absolute;
+        top: 1px;
+        right: 12px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+       
+      .invert-icon{
+        filter: invert(1);
+      }
+      .modal-img{
+        position: relative;
+        margin-top:5px ;
+      }
+      .modal-img i{
+        position: absolute;
+        top: 42%;
+        left: 42%;
+        font-size: 50px;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .navbar {
+            padding: .75rem !important;
+            background:#000000a5;
+        }
+        .navbar .navbar-collapse{
+           padding: 1rem;
+        }
+        .navbar .icon{
+            display: none;
+        }
+        .carousel-container {
+          width: 100%;
+        }
+    
+        .series-title{
+            font-size: 42px;
+        }
+        .carousel {
+          height: 130px; 
+        }
+        .hero{
+            background-position: right bottom;
+        }
+        .main .black-gradient::after {
+            background: linear-gradient(354deg, #181818 10%, hsla(0, 0%, 9%, 0.98) 20%, hsla(0, 0%, 9%, 0.97) 25%, hsla(0, 0%, 9%, 0.95) 35%, hsla(0, 0%, 9%, 0.94) 40%, hsla(0, 0%, 9%, 0.92) 45%, hsla(0, 0%, 9%, 0.9) 50%, hsla(0, 0%, 9%, 0.87) 55%, hsla(0, 0%, 9%, 0.82) 60%, hsla(0, 0%, 9%, 0.75) 65%, hsla(0, 0%, 9%, 0.63) 70%, hsla(0, 0%, 9%, 0.45) 75%, hsla(0, 0%, 9%, 0.27) 80%, hsla(0, 0%, 9%, 0.15) 85%, hsla(0, 0%, 9%, 0.08) 90%, hsla(0, 0%, 9%, 0.03) 95%, hsla(0, 0%, 9%, 0));
+            width: 100%;
+            height: 20vh;
+            margin-top: auto;
+        }
+        .item-carsouel p{
+            font-size: 14px;
+        }
+        .item-carsouel{
+            width: 160px;
+        }
+        .modal-content {
+            max-width: 90%;
+            padding: 15px;
+          }
+          .close{
+            top: 0px;
+            right: 8px;
+            font-size: 24px;
+          }
+
+      }
