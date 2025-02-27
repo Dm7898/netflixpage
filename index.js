@@ -91,7 +91,7 @@ const carouselFun = () => {
       return;
     }
 
-    const imageWidth = images[0].getBoundingClientRect().width + 10; // Include margin
+    const imageWidth = images[0].getBoundingClientRect().width + 10;
     const visibleImages = Math.floor(
       carouselContainer.clientWidth / imageWidth
     );
@@ -177,10 +177,12 @@ const fetchData = async () => {
       "https://repo-tech2edge.github.io/tasks/sample.json"
     );
     const data = await res.json();
-
+    if (!data) {
+      main.innerHTML = "Loading...";
+    }
     if (data) {
       renderHtml(data);
-      setTimeout(carouselFun, 500); // Ensure carousel runs after DOM update
+      setTimeout(carouselFun, 500);
     }
   } catch (err) {
     console.error(err);
@@ -190,5 +192,3 @@ const fetchData = async () => {
 fetchData().then(() => {
   setTimeout(setupModal, 500);
 });
-
-// fetchData();
